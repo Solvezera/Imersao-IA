@@ -13,7 +13,8 @@
 ### Desafio 01 - Criar um Script Python para análise dos filmes do IMDB gerados pela AI Studio
 
 - **Objetivo:** Usar o Gemini / AI Studio
-- **Tarefa:** Criar um código utilizando IA
+- **Resultado:**
+  ![Resultado Desafio 01](image.png)
 
 ### Desafio 02 - Criar um HTML básico com o resumo de sites gerados pelo Quick Chrome History Export
 
@@ -28,6 +29,8 @@
       - Quantidade de uso
       - Tipo de site (ex: redes sociais, notícias, entretenimento etc.)
   4.  Analisar os dados e tirar conclusões sobre como seu tempo é utilizado online.
+- **Resultado:**
+  ![Resultado Desafio 02](image-1.png)
 
 ---
 
