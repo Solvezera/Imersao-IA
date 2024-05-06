@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Análise do Histórico de Navegação</title>
+    <style>
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f5f7fa;
+        margin: 0;
+        padding: 0;
+      }
+      .container {
+        max-width: 800px;
+        margin: 50px auto;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+      }
+      h1 {
+        font-size: 28px;
+        color: #333;
+        margin-bottom: 20px;
+        text-align: center;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 20px;
+      }
+      th,
+      td {
+        padding: 12px;
+        border-bottom: 1px solid #ddd;
+      }
+      th {
+        background-color: #f2f2f2;
+        font-weight: bold;
+        color: #444;
+        text-transform: uppercase;
+      }
+      td {
+        color: #666;
+      }
+      .conclusoes {
+        padding: 15px;
+        border: 1px solid #ccc;
+        background-color: #f9f9f9;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        color: #555;
+      }
+      tr:nth-child(even) {
+        background-color: #f2f2f2;
+      }
+      .filter {
+        margin-bottom: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Análise do Histórico de Navegação</h1>
+      <table>
+        <thead>
+          <tr>
+            <th>Nome do Site</th>
+            <th>Quantidade de Uso</th>
+            <th>Tipo de Site</th>
+          </tr>
+        </thead>
+        <tbody id="tabela-sites">
+          <!-- Os dados do site serão inseridos aqui via JavaScript -->
+        </tbody>
+      </table>
+      <div class="conclusoes" id="conclusoes">
+        <!-- As conclusões serão inseridas aqui via JavaScript -->
+      </div>
+    </div>
+
+    <script>
+      // Função para fazer uma solicitação HTTP assíncrona
+      function carregarJSON(callback) {
+        var xhr = new XMLHttpRequest();
+        xhr.overrideMimeType("application/json");
+        xhr.open("GET", "history.json", true);
+        xhr.onreadystatechange = function () {
+          if (xhr.readyState === 4 && xhr.status == "200") {
+            callback(xhr.responseText);
+          }
+        };
+        xhr.send(null);
+      }
+
+      // Função para criar linhas da tabela
+      function criarLinhaTabela(site) {
+        const linha = document.createElement("tr");
+        const nome = document.createElement("td");
+        const quantidade = document.createElement("td");
+        const tipo = document.createElement("td");
+
+        nome.textContent = site.nome;
+        quantidade.textContent = site.quantidade_de_uso;
+        tipo.textContent = site.tipo;
+
+        linha.appendChild(nome);
+        linha.appendChild(quantidade);
+        linha.appendChild(tipo);
+
+        return linha;
+      }
+
+      // Função para carregar e exibir dados JSON
+      function carregarDadosJSON() {
+        carregarJSON(function (response) {
+          const dadosJson = JSON.parse(response);
+
+          const tabelaSites = document.getElementById("tabela-sites");
+          tabelaSites.innerHTML = ""; // Limpar tabela antes de adicionar novos dados
+
+          dadosJson.sites.forEach((site) => {
+            tabelaSites.appendChild(criarLinhaTabela(site));
+          });
+
+          document.getElementById("conclusoes").textContent =
+            dadosJson.conclusoes;
+        });
+      }
+      carregarDadosJSON();
+    </script>
+  </body>
+</html>

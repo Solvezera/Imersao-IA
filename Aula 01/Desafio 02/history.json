@@ -1,0 +1,90 @@
+{
+    "sites": [
+      {
+        "nome": "YouTube",
+        "quantidade_de_uso": 681,
+        "tipo": "Entretenimento"
+      },
+      {
+        "nome": "LinkedIn",
+        "quantidade_de_uso": 385,
+        "tipo": "Redes Sociais Profissionais"
+      },
+      {
+        "nome": "Gmail",
+        "quantidade_de_uso": 444,
+        "tipo": "E-mail"
+      },
+      {
+        "nome": "ClickUp",
+        "quantidade_de_uso": 428,
+        "tipo": "Gerenciamento de Projetos"
+      },
+      {
+        "nome": "Twitch",
+        "quantidade_de_uso": 365,
+        "tipo": "Streaming"
+      },
+      {
+        "nome": "GitHub",
+        "quantidade_de_uso": 56,
+        "tipo": "Desenvolvimento de Software"
+      },
+      {
+        "nome": "Raidbots",
+        "quantidade_de_uso": 28,
+        "tipo": "Jogos"
+      },
+      {
+        "nome": "Wowhead",
+        "quantidade_de_uso": 46,
+        "tipo": "Jogos"
+      },
+      {
+        "nome": "Archon",
+        "quantidade_de_uso": 235,
+        "tipo": "Jogos"
+      },
+      {
+        "nome": "Wago.io",
+        "quantidade_de_uso": 14,
+        "tipo": "Jogos"
+      },
+      {
+        "nome": "Jira",
+        "quantidade_de_uso": 24,
+        "tipo": "Trabalho"
+      },
+      {
+        "nome": "Discord",
+        "quantidade_de_uso": 259,
+        "tipo": "Comunicação"
+      },
+      {
+        "nome": "WhatsApp",
+        "quantidade_de_uso": 111,
+        "tipo": "Comunicação"
+      },
+      {
+        "nome": "Instagram",
+        "quantidade_de_uso": 439,
+        "tipo": "Redes Sociais"
+      },
+      {
+        "nome": "X (Twitter)",
+        "quantidade_de_uso": 164,
+        "tipo": "Redes Sociais"
+      },
+      {
+        "nome": "Google",
+        "quantidade_de_uso": 16,
+        "tipo": "Pesquisa"
+      },
+      {
+        "nome": "Outros",
+        "quantidade_de_uso": 257,
+        "tipo": "Diversos"
+      }
+    ],
+    "conclusoes": "Com base na análise, parece que seu tempo online é dividido principalmente entre entretenimento (YouTube, Twitch, jogos), trabalho (ClickUp, e-vertical, Air Manager) e redes sociais (LinkedIn, Instagram, X).  Uma parte significativa do tempo também é dedicada a comunicação (Discord, WhatsApp) e e-mail (Gmail)."
+  }
